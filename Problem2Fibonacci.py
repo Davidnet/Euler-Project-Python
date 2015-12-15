@@ -10,12 +10,12 @@ sum = 0
 flag = False
 iter = 0
 
-while flag != True:
+while flag is not True:
     x = nthFibonacci(iter)
     if x <= 4000000:
         iter = iter + 1
         if x % 2 == 0:
             sum = sum + x
     else:
-        print(sum)  
+        print(sum)
         flag = True
