@@ -1,4 +1,4 @@
-def productlist(l) :
+def productlist(l):
     p = 1
     for j in l:
         p *= j

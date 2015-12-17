@@ -8,5 +8,6 @@ def Sumdivisibleby(n, total):
 
 
 for x in range(0, 1000):
-    sol = Sumdivisibleby(3, 1000) + Sumdivisibleby(5, 1000) - Sumdivisibleby(15, 1000)
+    s1 = Sumdivisibleby(3, 1000)
+    sol = s1 + Sumdivisibleby(5, 1000) - Sumdivisibleby(15, 1000)
 print(sol)

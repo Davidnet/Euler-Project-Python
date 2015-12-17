@@ -1,26 +1,21 @@
-def productlist(l):
-    p = 1
-    for j in l:
-        p *= j
-    return p
+from functools import reduce
 
 
-l = list(range(1, 21))
-bound = productlist(l)
-candidates = []
-flag = True
+def gcd(a, b):
+    """Return the greatest common multipler of two numbers"""
+    while b != 0:
+        (a, b) = (b, a % b)
+    return a
 
 
-def procedures():
-    for i in range(20, bound, 20):
-        x = []
-        x = [i % f for f in l]
-        print(i)
-        if sum(x) == 0:
-            if flag:
-                candidates.append(i)
-                return candidates
-                flag = False
+def lcm(a, b):
+    """Return the lowest common multipler of two numbers"""
+    return a*b / gcd(a, b)
 
 
-print(procedures())
+def lcmm(*args):
+    """Return lcm of args."""
+    return reduce(lcm, args)
+
+
+print(lcmm(*range(1, 20)))
